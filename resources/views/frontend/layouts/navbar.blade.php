@@ -28,6 +28,7 @@
             </ul>
           </li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="{{ route('frontend_login')}}">Login</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->

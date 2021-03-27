@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\frontend\frontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,5 +14,9 @@ use App\Http\Controllers\frontend\frontendController;
 */
 
 
-Route::get('/index',[frontendController::class, 'index']);
+Route::get('/',[App\Http\Controllers\frontend\FrontendController::class, 'index']);
 
+
+
+//auth routes are here
+Route::get('/login',[App\Http\Controllers\frontend\FrontendLoginController::class,'login'])->name('frontend_login');
