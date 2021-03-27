@@ -9,18 +9,8 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        return view('frontend.pages.home');
     }
 
-    public function login_action()
-    {
-       $credentials = $request->only('email','password');
-
-       if (Auth::attempt($credentials)) {
-        return redirect()->intended(route('index'));
-
-     }
-     return redirect()->route('login');
-  }
-
+    //End
 }
