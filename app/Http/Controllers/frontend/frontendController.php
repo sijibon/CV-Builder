@@ -21,15 +21,14 @@ class FrontendController extends Controller
 
     public function login_action(Request $request)
     {
-      $crendential = $request->only('email','password');
+      $credentials = $request->only('email','password');
 
 
-      if (Auth::guard('frontend_user')->attempt($crendential)) {
-          dd('login');
-        // return redirect()->intended(route('home'));
+      if (Auth::guard('frontend_user')->attempt($credentials)) {
+
+         return redirect()->intended(route('home'));
      }
-     dd('not login');
-    //  return redirect()->route('frontend_login');
+       return redirect()->route('frontend_login');
     }
 
 
