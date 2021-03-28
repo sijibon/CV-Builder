@@ -19,8 +19,8 @@ Route::get('/',[App\Http\Controllers\frontend\FrontendController::class, 'index'
 //login route
 Route::get('login',[App\Http\Controllers\frontend\FrontendController::class,'login'])->name('frontend_login');
 Route::post('/login_action',[App\Http\Controllers\frontend\FrontendController::class,'login_action'])->name('user.login.action');
-
-Route::group(['middleware'=>'users'], function(){
+Route::get('/user/logout',[App\Http\Controllers\frontend\FrontendController::class, 'user_logout'])->name('user.logout');
+// Route::group(['middleware'=>'users'], function(){
     
-});
+// });
 
